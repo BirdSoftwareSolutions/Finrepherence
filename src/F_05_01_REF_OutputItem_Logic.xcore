@@ -1,0 +1,597 @@
+/**
+ * Copyright 2024 BIRD Software Solutions
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ */
+package F_05_01_REF_OutputItem_Logic
+import sdd_domains.*
+import input_tables.*
+import output_tables.*
+annotation "dep" as dep
+class F_05_01_REF_OutputItem_UnionItem {
+	refers F_05_01_REF_OutputItem_Base base 
+
+@dep (dep1="base.GRSS_CRRYNG_AMNT")
+ 	op int  GRSS_CRRYNG_AMNT()
+ 	{
+		base.GRSS_CRRYNG_AMNT()
+	}
+	
+
+
+@dep (dep1="base.CRRYNG_AMNT")
+ 	op int  CRRYNG_AMNT()
+ 	{
+		base.CRRYNG_AMNT()
+	}
+	
+
+
+@dep (dep1="base.ACCNTNG_CLSSFCTN")
+ 	op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN()
+ 	{
+		base.ACCNTNG_CLSSFCTN()
+	}
+	
+
+
+@dep (dep1="base.TYP_ACCNTNG_ITM")
+ 	op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM()
+ 	{
+		base.TYP_ACCNTNG_ITM()
+	}
+	
+
+
+@dep (dep1="base.HLD_SL_INDCTR")
+ 	op HLD_SL_INDCTR_domain  HLD_SL_INDCTR()
+ 	{
+		base.HLD_SL_INDCTR()
+	}
+	
+
+
+@dep (dep1="base.HLD_TRDNG_INDCTR")
+ 	op HLD_TRDNG_INDCTR_domain  HLD_TRDNG_INDCTR()
+ 	{
+		base.HLD_TRDNG_INDCTR()
+	}
+	
+
+
+@dep (dep1="base.HLD_MTRTY_INDCTR")
+ 	op HLD_MTRTY_INDCTR_domain  HLD_MTRTY_INDCTR()
+ 	{
+		base.HLD_MTRTY_INDCTR()
+	}
+	
+
+
+@dep (dep1="base.SBJCT_IMPRMNT_INDCTR")
+ 	op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR()
+ 	{
+		base.SBJCT_IMPRMNT_INDCTR()
+	}
+	
+
+
+@dep (dep1="base.ACCNTNG_PRTFL_VLTN_RL")
+ 	op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL()
+ 	{
+		base.ACCNTNG_PRTFL_VLTN_RL()
+	}
+	
+
+
+@dep (dep1="base.ACCNTNG_FRMWRK")
+ 	op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK()
+ 	{
+		base.ACCNTNG_FRMWRK()
+	}
+	
+
+
+@dep (dep1="base.INSTTTNL_SCTR")
+ 	op INSTTTNL_SCTR_domain  INSTTTNL_SCTR()
+ 	{
+		base.INSTTTNL_SCTR()
+	}
+	
+
+
+@dep (dep1="base.SUBA_CD")
+ 	op String  SUBA_CD()
+ 	{
+		base.SUBA_CD()
+	}
+	
+
+
+@dep (dep1="base.TYP_INSTRMNT")
+ 	op TYP_INSTRMNT_domain  TYP_INSTRMNT()
+ 	{
+		base.TYP_INSTRMNT()
+	}
+	
+
+
+@dep (dep1="base.RPYMNT_RGHTS")
+ 	op RPYMNT_RGHTS_domain  RPYMNT_RGHTS()
+ 	{
+		base.RPYMNT_RGHTS()
+	}
+	
+
+
+@dep (dep1="base.PRJCT_FNNC_LN")
+ 	op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN()
+ 	{
+		base.PRJCT_FNNC_LN()
+	}
+	
+
+
+@dep (dep1="base.TYP_CLLTRL_GRNT_RCVD")
+ 	op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD()
+ 	{
+		base.TYP_CLLTRL_GRNT_RCVD()
+	}
+	
+
+
+@dep (dep1="base.DT_RFRNC")
+ 	op Date  DT_RFRNC()
+ 	{
+		base.DT_RFRNC()
+	}
+	
+
+
+@dep (dep1="base.PRPS")
+ 	op PRPS_domain  PRPS()
+ 	{
+		base.PRPS()
+	}
+	
+
+
+@dep (dep1="base.ENTTY_RIAD_CD_RPRTNG_AGNT")
+ 	op String  ENTTY_RIAD_CD_RPRTNG_AGNT()
+ 	{
+		base.ENTTY_RIAD_CD_RPRTNG_AGNT()
+	}
+	
+
+}
+class F_05_01_REF_OutputItem_Base {
+	
+		
+ 	op int   GRSS_CRRYNG_AMNT()
+	{
+	return 0
+		}
+
+		
+ 	op int   CRRYNG_AMNT()
+	{
+	return 0
+		}
+
+		
+ 	op ACCNTNG_CLSSFCTN_domain   ACCNTNG_CLSSFCTN()
+	{
+		}
+
+		
+ 	op TYP_ACCNTNG_ITM_domain   TYP_ACCNTNG_ITM()
+	{
+		}
+
+		
+ 	op HLD_SL_INDCTR_domain   HLD_SL_INDCTR()
+	{
+		}
+
+		
+ 	op HLD_TRDNG_INDCTR_domain   HLD_TRDNG_INDCTR()
+	{
+		}
+
+		
+ 	op HLD_MTRTY_INDCTR_domain   HLD_MTRTY_INDCTR()
+	{
+		}
+
+		
+ 	op SBJCT_IMPRMNT_INDCTR_domain   SBJCT_IMPRMNT_INDCTR()
+	{
+		}
+
+		
+ 	op VLTN_RL_domain   ACCNTNG_PRTFL_VLTN_RL()
+	{
+		}
+
+		
+ 	op ACCNTNG_FRMWRK_domain   ACCNTNG_FRMWRK()
+	{
+		}
+
+		
+ 	op INSTTTNL_SCTR_domain   INSTTTNL_SCTR()
+	{
+		}
+
+		
+ 	op String   SUBA_CD()
+	{
+		}
+
+		
+ 	op TYP_INSTRMNT_domain   TYP_INSTRMNT()
+	{
+		}
+
+		
+ 	op RPYMNT_RGHTS_domain   RPYMNT_RGHTS()
+	{
+		}
+
+		
+ 	op PRJCT_FNNC_LN_domain   PRJCT_FNNC_LN()
+	{
+		}
+
+		
+ 	op TYP_PRTCTN_domain   TYP_CLLTRL_GRNT_RCVD()
+	{
+		}
+
+		
+ 	op Date   DT_RFRNC()
+	{
+		}
+
+		
+ 	op PRPS_domain   PRPS()
+	{
+		}
+
+		
+ 	op String   ENTTY_RIAD_CD_RPRTNG_AGNT()
+	{
+		}
+
+}
+
+class F_05_01_REF_OutputItem_UnionTable {
+			 	contains  F_05_01_REF_OutputItem_UnionItem []   F_05_01_REF_OutputItem_UnionItems	
+			 	refers Non_Negotiable_bonds_Table  Non_Negotiable_bonds_Table
+			 	refers Loans_and_advances_Table  Loans_and_advances_Table
+			 	op F_05_01_REF_OutputItem_UnionItem []   calc_F_05_01_REF_OutputItem_UnionItems() 
+				{
+				 	var items = new org.eclipse.emf.common.util.BasicEList<F_05_01_REF_OutputItem_UnionItem>()
+for(Non_Negotiable_bonds item : non_Negotiable_bonds_Table.non_Negotiable_bondss)
+{
+	var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createF_05_01_REF_OutputItem_UnionItem
+	newItem.base = item
+	items.add(newItem)
+}
+for(Loans_and_advances item : loans_and_advances_Table.loans_and_advancess)
+{
+	var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createF_05_01_REF_OutputItem_UnionItem
+	newItem.base = item
+	items.add(newItem)
+}
+				 	return items
+				}
+			 	op String  init() 
+				{
+				 	org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this) 
+	 	 			this.f_05_01_REF_OutputItem_UnionItems.addAll(calc_F_05_01_REF_OutputItem_UnionItems)
+	 	 			  return null
+				}
+
+			}
+
+class Non_Negotiable_bonds  extends F_05_01_REF_OutputItem_Base {
+
+// remove any duplicates in these refers statements
+refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT
+
+refers BIRD_PRTY bIRD_PRTY
+
+refers BIRD_SCRTY_PSTN bIRD_SCRTY_PSTN
+@dep (dep1="BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.GRSS_CRRYNG_AMNT")
+op int  GRSS_CRRYNG_AMNT() 
+{
+	BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.GRSS_CRRYNG_AMNT
+}
+@dep (dep1="BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.CRRYNG_AMNT")
+op int  CRRYNG_AMNT() 
+{
+	BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.CRRYNG_AMNT
+}
+@dep (dep1="BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.ACCNTNG_CLSSFCTN")
+op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN() 
+{
+	BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.ACCNTNG_CLSSFCTN
+}
+@dep (dep1="BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.HLD_SL_INDCTR")
+op HLD_SL_INDCTR_domain  HLD_SL_INDCTR() 
+{
+	BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.HLD_SL_INDCTR
+}
+@dep (dep1="BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.SBJCT_IMPRMNT_INDCTR")
+op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR() 
+{
+	BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.SBJCT_IMPRMNT_INDCTR
+}
+@dep (dep1="BIRD_PRTY.INSTTTNL_SCTR")
+op INSTTTNL_SCTR_domain  INSTTTNL_SCTR() 
+{
+	BIRD_PRTY.INSTTTNL_SCTR
+}
+@dep (dep1="BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.RPRTNG_AGNT_ID")
+op String  SUBA_CD() 
+{
+	BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.RPRTNG_AGNT_ID
+}
+@dep (dep1="BIRD_SCRTY_PSTN.TYP_INSTRMNT")
+op TYP_INSTRMNT_domain  TYP_INSTRMNT() 
+{
+	BIRD_SCRTY_PSTN.TYP_INSTRMNT
+}
+op RPYMNT_RGHTS_domain  RPYMNT_RGHTS() 
+{
+	RPYMNT_RGHTS_domain.OTHER_THAN_ON_DEMAND_OR_SHORT_NOTICE
+}
+op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN() 
+{
+	PRJCT_FNNC_LN_domain.NON_PROJECT_FINANCE_LOAN
+}
+op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD() 
+{
+	TYP_PRTCTN_domain.NOT_APPLICABLE
+}
+@dep (dep1="BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.DT_RFRNC")
+op Date  DT_RFRNC() 
+{
+	BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.DT_RFRNC
+}
+op PRPS_domain  PRPS() 
+{
+	PRPS_domain.OTHER_PURPOSES
+}
+@dep (dep1="BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.RPRTNG_AGNT_ID")
+op String  ENTTY_RIAD_CD_RPRTNG_AGNT() 
+{
+	BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.RPRTNG_AGNT_ID
+}
+}
+
+class Non_Negotiable_bonds_Table {
+				refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_Table bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_Table
+				// remove any duplicates in these refers statements
+				refers BIRD_PRTY_Table bIRD_PRTY_Table
+				
+				refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_Table bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT
+				
+				refers BIRD_SCRTY_PSTN_Table bIRD_SCRTY_PSTN_Table
+				
+				refers BIRD_ENTTY_RL_Table bIRD_ENTTY_RL_Table
+				
+				refers BIRD_SCRTY_EXCHNG_TRDBL_DRVTV_Table bIRD_SCRTY_EXCHNG_TRDBL_DRVTV_Table
+				
+				refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_Table bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_Table
+				
+				
+				// remove any duplicates in these refers statements
+			 	contains  Non_Negotiable_bonds []   Non_Negotiable_bondss	
+			 				 	op Non_Negotiable_bonds []   calc_Non_Negotiable_bondss() 
+				{
+				 	var items = new org.eclipse.emf.common.util.BasicEList<Non_Negotiable_bonds>()
+				 	for(  item : BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_Table.BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNTs)
+				 	{
+						var nogotiable =  item.the_BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_EIL_1.the_BIRD_SCRTY_PSTN_EIL_1.NGTBL_SCRTY_PSTN_INDCTR
+				 		if ((nogotiable ==  SCRTY_EXCHNG_TRDBL_DRVTV_PSTN_TYP_domain.FORBORNE_LONG_NON_NEGOTIABLE_SECURITY_POSITION) ||
+				 			(nogotiable ==  SCRTY_EXCHNG_TRDBL_DRVTV_PSTN_TYP_domain.NON_FORBORNE_LONG_NON_NEGOTIABLE_SECURITY_POSITION) 
+				 		)
+				 		{
+					 		var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createNon_Negotiable_bonds
+					 		newItem.BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT = item
+					 		newItem.BIRD_SCRTY_PSTN = item.the_BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_EIL_1.the_BIRD_SCRTY_PSTN_EIL_1
+					 		//newItem.setc =newItem.security.theSCRTY_EXCHNG_TRDBL_DRVTV
+					 		var entity_role =newItem.BIRD_SCRTY_PSTN.the_BIRD_ENTTY_RL_EIL_1
+					 		newItem.BIRD_PRTY = entity_role.the_BIRD_PRTY_EIL_1
+					 		items.add(newItem)
+					 	}
+				 	}
+				 	return items
+				}
+			 	op String  init() 
+				{
+				 	org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
+		 		 	this.non_Negotiable_bondss.addAll(calc_Non_Negotiable_bondss) 		 
+		 		 	return null
+				}
+			}
+class Loans_and_advances  extends F_05_01_REF_OutputItem_Base {
+
+// remove any duplicates in these refers statements
+refers BIRD_ABSTRCT_INSTRMNT_RL bIRD_ABSTRCT_INSTRMNT_RL
+
+// remove any duplicates in these refers statements
+refers BIRD_PRTY bIRD_PRTY
+// remove any duplicates in these refers statements
+refers BIRD_INSTRMNT bIRD_INSTRMNT
+
+// remove any duplicates in these refers statements
+refers BIRD_CLLTRL bIRD_CLLTRL
+
+@dep (dep1="BIRD_ABSTRCT_INSTRMNT_RL.GRSS_CRRYNG_AMNT")
+op int  GRSS_CRRYNG_AMNT() 
+{
+	BIRD_ABSTRCT_INSTRMNT_RL.GRSS_CRRYNG_AMNT
+}
+@dep (dep1="BIRD_ABSTRCT_INSTRMNT_RL.CRRYNG_AMNT")
+op int  CRRYNG_AMNT() 
+{
+	BIRD_ABSTRCT_INSTRMNT_RL.CRRYNG_AMNT
+}
+@dep (dep1="BIRD_ABSTRCT_INSTRMNT_RL.ACCNTNG_CLSSFCTN")
+op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN() 
+{
+	BIRD_ABSTRCT_INSTRMNT_RL.ACCNTNG_CLSSFCTN
+}
+@dep (dep1="BIRD_ABSTRCT_INSTRMNT_RL.HLD_SL_INDCTR")
+op HLD_SL_INDCTR_domain  HLD_SL_INDCTR() 
+{
+	BIRD_ABSTRCT_INSTRMNT_RL.HLD_SL_INDCTR
+}
+@dep (dep1="BIRD_ABSTRCT_INSTRMNT_RL.SBJCT_IMPRMNT_INDCTR")
+op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR() 
+{
+	BIRD_ABSTRCT_INSTRMNT_RL.SBJCT_IMPRMNT_INDCTR
+}
+@dep (dep1="BIRD_PRTY.INSTTTNL_SCTR")
+op INSTTTNL_SCTR_domain  INSTTTNL_SCTR() 
+{
+	BIRD_PRTY.INSTTTNL_SCTR
+}
+@dep (dep1="BIRD_INSTRMNT.RPRTNG_AGNT_ID")
+op String  SUBA_CD() 
+{
+	BIRD_INSTRMNT.RPRTNG_AGNT_ID
+}
+@dep (dep1="BIRD_INSTRMNT.RPYMNT_RGHTS")
+op RPYMNT_RGHTS_domain  RPYMNT_RGHTS() 
+{
+	BIRD_INSTRMNT.RPYMNT_RGHTS
+}
+@dep (dep1="BIRD_ABSTRCT_INSTRMNT_RL.PRJCT_FNNC_LN")
+op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN() 
+{
+	BIRD_ABSTRCT_INSTRMNT_RL.PRJCT_FNNC_LN
+}
+@dep (dep1="BIRD_CLLTRL.TYP_CLLTRL")
+op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD() 
+{
+	if (BIRD_CLLTRL === null)
+	   TYP_PRTCTN_domain.NOT_APPLICABLE
+	else
+		BIRD_CLLTRL.TYP_CLLTRL
+}
+@dep (dep1="BIRD_INSTRMNT.DT_RFRNC")
+op Date  DT_RFRNC() 
+{
+	BIRD_INSTRMNT.DT_RFRNC
+}
+@dep (dep1="BIRD_ABSTRCT_INSTRMNT_RL.PRPS")
+op PRPS_domain  PRPS() 
+{
+	BIRD_ABSTRCT_INSTRMNT_RL.PRPS
+}
+@dep (dep1="BIRD_INSTRMNT.RPRTNG_AGNT_ID")
+op String  ENTTY_RIAD_CD_RPRTNG_AGNT() 
+{
+	BIRD_INSTRMNT.RPRTNG_AGNT_ID
+}
+@dep (dep1 = "BIRD_INSTRMNT.TYP_INSTRMNT")
+  	op TYP_INSTRMNT_domain  TYP_INSTRMNT()
+	{
+		BIRD_INSTRMNT.TYP_INSTRMNT
+	}
+}
+
+class Loans_and_advances_Table {
+				refers BIRD_ABSTRCT_INSTRMNT_RL_Table bIRD_ABSTRCT_INSTRMNT_RL_Table
+				// remove any duplicates in these refers statements
+				// remove any duplicates in these refers statements
+				refers BIRD_PRTY_Table bIRD_PRTY_Table
+				// remove any duplicates in these refers statements
+				refers BIRD_INSTRMNT_Table bIRD_INSTRMNT_Table
+				// remove any duplicates in these refers statements
+				refers BIRD_CLLTRL_Table bIRD_CLLTRL_Table
+				// remove any duplicates in these refers statements	
+				refers BIRD_INSTRMNT_ENTTY_RL_ASSGNMNT_Table bIRD_INSTRMNT_ENTTY_RL_ASSGNMNT_Table
+				// remove any duplicates in these refers statements
+				refers BIRD_CRDT_FCLTY_CLLTRL_RCVD_INSTRMNT_ASSGNMNT_Table bIRD_CRDT_FCLTY_CLLTRL_RCVD_INSTRMNT_ASSGNMNT_Table
+				
+				refers BIRD_CRDT_FCLTY_CLLTRL_ASSGNMNT_Table bIRD_CRDT_FCLTY_CLLTRL_ASSGNMNT_Table
+				
+				refers BIRD_ENTTY_RL_Table bIRD_ENTTY_RL_Table	
+				
+				refers BIRD_FNNCL_CNTRCT_Table bIRD_FNNCL_CNTRCT_Table
+				
+			 	contains  Loans_and_advances []   Loans_and_advancess	
+			 	op Loans_and_advances []   calc_Loans_and_advancess() 
+				{
+	 	var items = new org.eclipse.emf.common.util.BasicEList<Loans_and_advances>()
+	 					 					 		 	for( BIRD_ABSTRCT_INSTRMNT_RL abstractInstrument : BIRD_ABSTRCT_INSTRMNT_RL_Table.BIRD_ABSTRCT_INSTRMNT_RLs)
+	 					 					 		 	{
+	 					 					 		 		var typeInst = abstractInstrument.the_BIRD_INSTRMNT_EIL_1.TYP_INSTRMNT()
+	 					 					 		 		if ((typeInst == TYP_INSTRMNT_domain.ADVANCES_THAT_ARE_NOT_LOANS_OTHER_THAN_TRANSIT_ITEMS_AND_SUSPENCE_ITEMS ) || 
+	 					 					 		 			(typeInst == TYP_INSTRMNT_domain.OTHER_LOANS ) ||
+	 					 					 		 			(typeInst == TYP_INSTRMNT_domain.CREDIT_CARD_DEBT )||
+	 					 					 		 			(typeInst == TYP_INSTRMNT_domain.FINANCE_LEASES ) ||
+	 					 					 		 			(typeInst == TYP_INSTRMNT_domain.DEPOSIT_REDEEMABLE_AT_NOTICE ) ||
+	 					 					 		 			(typeInst == TYP_INSTRMNT_domain.DEPOSITS_WITH_AGREED_MATURITY_OTHER_THAN_COUNTERPART_LIABILITY_TO_NON_DERECOGNISED_LOANS )
+	 					 					 		 			
+	 					 					 		 		)
+	 					 					 		 		{
+		 					 					 		 		var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createLoans_and_advances
+		 					 					 		 		
+		 					 					 		 		newItem.BIRD_ABSTRCT_INSTRMNT_RL = abstractInstrument
+		 					 					 		 		newItem.BIRD_INSTRMNT = abstractInstrument.the_BIRD_INSTRMNT_EIL_1
+		 					 					 		 		for (BIRD_INSTRMNT_ENTTY_RL_ASSGNMNT era : BIRD_INSTRMNT_ENTTY_RL_ASSGNMNT_Table.BIRD_INSTRMNT_ENTTY_RL_ASSGNMNTs)
+		 					 					 		 		{
+		 					 					 		 			var inst = era.the_BIRD_INSTRMNT_EIL_1
+		 					 					 		 			if (inst == newItem.BIRD_INSTRMNT)
+		 					 					 		 			{
+		 					 					 		 				var er = era.the_BIRD_ENTTY_RL_EIL_1
+		 					 					 		 				newItem.BIRD_PRTY = er.the_BIRD_PRTY_EIL_1
+		 					 					 		 			}
+		 					 					 		 		}
+		 					 					 		 		
+		 					 					 		 		for(BIRD_CRDT_FCLTY_CLLTRL_RCVD_INSTRMNT_ASSGNMNT cfcria :BIRD_CRDT_FCLTY_CLLTRL_RCVD_INSTRMNT_ASSGNMNT_Table.BIRD_CRDT_FCLTY_CLLTRL_RCVD_INSTRMNT_ASSGNMNTs)
+		 					 					 		 		{
+		 					 					 		 			if (cfcria.the_BIRD_ABSTRCT_INSTRMNT_RL_EIL_1 == abstractInstrument)
+		 					 					 		 			{
+		 					 					 		 				var cf = cfcria.the_BIRD_CRDT_FCLTY_EIL_1
+		 					 					 		 				for (BIRD_CRDT_FCLTY_CLLTRL_ASSGNMNT cfca : BIRD_CRDT_FCLTY_CLLTRL_ASSGNMNT_Table.BIRD_CRDT_FCLTY_CLLTRL_ASSGNMNTs)
+		 					 					 		 				{
+		 					 					 		 					if (cfca.the_BIRD_CRDT_FCLTY_EIL_1 == cf)
+		 					 					 		 					{
+		 					 					 		 						newItem.BIRD_CLLTRL = cfca.the_BIRD_CLLTRL_EIL_1
+		 					 					 		 					}
+		 					 					 		 					
+		 					 					 		 				}
+		 					 					 		 			}
+		 					 					 		 		}
+	 					 					 		 		
+	 					 					 		 		
+	 					 					 		 			items.add(newItem)
+	 					 					 		 			
+	 					 					 		 		}
+	 					 					 		 	}
+	 					 					 		 	return items
+	}
+			 	op String  init() 
+				{
+				 	org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
+		 		 	this.loans_and_advancess.addAll(calc_Loans_and_advancess) 		 
+		 		 	return null
+				}
+			}
+
