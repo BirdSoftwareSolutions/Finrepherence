@@ -1,2 +1,2 @@
 # Finrepherence
-Executable Finreptranfromations on BIRD
+Executable Finrep Transformations on BIRD
